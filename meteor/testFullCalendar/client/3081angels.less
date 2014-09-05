@@ -1,0 +1,49 @@
+// Variables
+@panel-colour: rgba(245,245,245,0.8);
+@panel-fallback-colour: #245245245;
+
+
+
+
+.panel {
+  background-color: @panel-fallback-colour; // fallback background color
+  background-color: @panel-colour;
+  font-size: 12px;
+}
+
+html {
+  //background: url('/bebe-ange.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+body {
+  padding-top: 20px;
+  font-size: 16px;
+  font-family: "Open Sans",serif;
+  background: transparent;
+}
+
+h1 {
+  font-family: "Abel", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 40px;
+}
+
+
+.jumbotron {
+  background: transparent;
+}
+
+#extraInfo {
+  height: 150px;
+}
+
+.todo,
+.fc-agenda .todo .fc-event-time,
+.todo a {
+  background-color:green;
+}

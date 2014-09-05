@@ -1,0 +1,17 @@
+{
+  "packages": {
+    "bootstrap3-datetimepicker": {},
+    "moment": {},
+    "roles": {},
+    "iron-router": {},
+    "bootstrap-3": {},
+    "accounts-ui-bootstrap-3": {},
+    "inspector": {},
+    "bootstrap-errors": {},
+    "pretty-checkable": {},
+    "bootstrap-growl": {},
+    "fast-render": {},
+    "pretty-fullcalendar": {},
+    "meteor-errors": {}
+  }
+}

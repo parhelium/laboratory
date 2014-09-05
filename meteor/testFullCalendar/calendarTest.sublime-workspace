@@ -1,0 +1,508 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"background",
+				"background-color"
+			],
+			[
+				"Pro",
+				"projectDocs"
+			],
+			[
+				"set",
+				"setDefault(key, value)"
+			],
+			[
+				"newProj",
+				"newProjImages"
+			],
+			[
+				"on",
+				"onStop	Meteor: this.onStop(fn)"
+			],
+			[
+				"find",
+				"find (fn)"
+			],
+			[
+				"GridF",
+				"GridFS(name, options, mongoOptions, mongoUrl})"
+			],
+			[
+				"Grid",
+				"GridFS(name, options, mongoOptions, mongoUrl})"
+			],
+			[
+				"sponsor",
+				"sponsorCollection"
+			],
+			[
+				"u",
+				"userID"
+			],
+			[
+				"Meteor",
+				"Meteor.call	Meteor.call(name, param1, param2, ... [, asyncCallback])"
+			],
+			[
+				"pa",
+				"padding-right"
+			],
+			[
+				"bs3-",
+				"bs3-form	bs3-form"
+			],
+			[
+				"bs3-mo",
+				"bs3-modal	bs3-modal"
+			],
+			[
+				"commentA",
+				"commentAttributes	(?)"
+			],
+			[
+				"text",
+				"textarea	Tag"
+			],
+			[
+				"comme",
+				"commentDocs (?)"
+			],
+			[
+				"bs",
+				"bs3-modal	bs3-modal"
+			],
+			[
+				"bs3-pan",
+				"bs3-panel:footer	bs3-panel-footer"
+			],
+			[
+				"bs3-pa",
+				"bs3-panel:heading	bs3-panel-heading"
+			],
+			[
+				"l",
+				"log (fn)"
+			],
+			[
+				"bs3-bu",
+				"bs3-button:primary	bs3-button-primary"
+			],
+			[
+				"gl",
+				"glyphicon-ok-sign"
+			],
+			[
+				"ge",
+				"get(key)"
+			],
+			[
+				"projectImage",
+				"projectImageModalID"
+			],
+			[
+				"backgr",
+				"background-color"
+			],
+			[
+				"bs3-im",
+				"bs3-input:email	bs3-input-email"
+			],
+			[
+				"joinStu",
+				"joinStudentCheck"
+			],
+			[
+				"joinTr",
+				"joinTradieCheck"
+			],
+			[
+				"joinSpon",
+				"joinSponsorCheck"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 383.0,
+		"selected_items":
+		[
+			[
+				":w",
+				":w - Save"
+			],
+			[
+				":W",
+				":w - Save"
+			],
+			[
+				":v",
+				":w - Save"
+			],
+			[
+				"Tern",
+				"TernJS: Next Occurance"
+			],
+			[
+				"tern",
+				"TernJS: Next Occurance"
+			],
+			[
+				":wq",
+				"BracketHighlighter: Swap Quotes"
+			],
+			[
+				"Package Control: ",
+				"Package Control: List Packages"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"TernJS",
+				"TernJS: Reload"
+			],
+			[
+				"git status",
+				"Git: Status"
+			],
+			[
+				"git commit",
+				"Git: Commit"
+			],
+			[
+				"",
+				":e - Revert"
+			],
+			[
+				"git ad",
+				"Git: Add Current File"
+			],
+			[
+				"git",
+				"Git: Change Branch"
+			],
+			[
+				":q",
+				"Git: Quick Commit"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"sear",
+				"DevDocs: Search From Input"
+			],
+			[
+				": ",
+				":w - Save"
+			],
+			[
+				"Snippet: ",
+				"Snippet: bs3-input-submit"
+			],
+			[
+				"Packa",
+				"Package Control: List Packages"
+			]
+		],
+		"width": 521.0
+	},
+	"console":
+	{
+		"height": 764.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/pnunn/tradebase2/client/js/carousel.js",
+		"/home/pnunn/tradebase2/TODO's",
+		"/home/pnunn/tradebase2/lib/collections.js",
+		"/home/pnunn/tradebase2/client/css/loginPageLayout.css",
+		"/home/pnunn/tradebase2/server/startup.js",
+		"/home/pnunn/tradebase2/client/js/projectList.js",
+		"/home/pnunn/tradebase2/server/publication.js",
+		"/home/pnunn/tradebase2/lib/methods.js",
+		"/home/pnunn/tradebase2/client/js/main.js",
+		"/home/pnunn/tradebase2/client/js/projectPage.js",
+		"/home/pnunn/tradebase2/client/js/projectEdit.js",
+		"/home/pnunn/tradebase2/client/js/adds.js",
+		"/home/pnunn/tradebase2/packages/bootstrap3-local/bootstrap-override.css",
+		"/home/pnunn/tradebase2/client/js/errors.js",
+		"/home/pnunn/tradebase2/lib/router.js",
+		"/home/pnunn/tradebase2/server/methods.js",
+		"/home/pnunn/tradebase2/client/js/newProject.js",
+		"/home/pnunn/tradebase2/client/js/jobPage.js",
+		"/home/pnunn/tradebase2/smart.json",
+		"/home/pnunn/tradebase2/client/views/projectPage.html",
+		"/home/pnunn/tradebase2/client/views/projectEdit.html",
+		"/home/pnunn/tradebase2/client/views/loginPageLayout.html",
+		"/home/pnunn/tradebase2/client/views/mostViewed.html",
+		"/home/pnunn/tradebase2/client/views/nav.html",
+		"/home/pnunn/tradebase2/client/views/jobPage.html",
+		"/home/pnunn/tradebase2/client/views/jobList.html",
+		"/home/pnunn/tradebase2/client/views/index.html",
+		"/home/pnunn/tradebase2/client/views/summary.html",
+		"/home/pnunn/tradebase2/client/views/projectList.html",
+		"/home/pnunn/tradebase2/client/js/mostViewed.js",
+		"/home/pnunn/tradebase2/client/views/adds.html",
+		"/home/pnunn/tradebase2/client/views/carousel.html",
+		"/home/pnunn/tradebase2/client/views/contact.html",
+		"/home/pnunn/tradebase2/client/views/loggedInPageLayout.html",
+		"/home/pnunn/tradebase2/client/views/join.html",
+		"/home/pnunn/tradebase2/client/views/newJob.html",
+		"/home/pnunn/tradebase2/client/views/newProject.html",
+		"/home/pnunn/src/CodeIdeas",
+		"/home/pnunn/tradebase2/client/js/editProject.js",
+		"/home/pnunn/tradebase2/collections.js",
+		"/home/pnunn/tradebase2/tradebase2.sublime-project",
+		"/home/pnunn/src/3081angles/3081angles/3081angels.sublime-project",
+		"/home/pnunn/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/pnunn/tradebase2/lib/publishHelpers.coffee",
+		"/home/pnunn/.config/sublime-text-3/Packages/AdvancedNewFile/README.md",
+		"/home/pnunn/.config/sublime-text-3/Packages/TernJS/TernJS.sublime-settings",
+		"/home/pnunn/Documents/Sol1/imageination.txt",
+		"/home/pnunn/.config/sublime-text-3/Packages/LESS/README.md",
+		"/home/pnunn/tradebase2/client/views/marketing.html",
+		"/home/pnunn/tradebase2/public/ad example.jpg",
+		"/home/pnunn/.config/sublime-text-3/Packages/User/Package Control.sublime-settings",
+		"/home/pnunn/tradebase2/tradebase2.sublime-workspace",
+		"/home/pnunn/src/meteor/cfs-multi-filehandler-example/app.html",
+		"/home/pnunn/src/meteor/cfs-multi-filehandler-example/app.js",
+		"/home/pnunn/.config/sublime-text-3/Packages/User/Git.sublime-settings",
+		"/home/pnunn/.config/sublime-text-3/Packages/Git/Git.sublime-settings",
+		"/home/pnunn/Documents/Sol1/voip_dhcp.txt",
+		"/home/pnunn/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
+		"/home/pnunn/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
+		"/home/pnunn/ownCloud/Backup-codes-pedrooz.txt",
+		"/home/pnunn/ownCloud/Amazon/rootkey.csv",
+		"/home/pnunn/ownCloud/Amazon/ec2testing.pem",
+		"/home/pnunn/tradebase2/client/newJob.html",
+		"/home/pnunn/Documents/Amato/Customers.csv",
+		"/home/pnunn/Documents/Sol1/imagemediagroup@bigpond.com",
+		"/home/pnunn/tradebase2/client/views/loadProjFiles.html",
+		"/home/pnunn/.config/sublime-text-3/Packages/User/HTML.sublime-settings",
+		"/home/pnunn/.config/sublime-text-3/Packages/Nodejs/Nodejs.sublime-settings",
+		"/home/pnunn/src/meteor/cfs-multi-filehandler-example/app.css",
+		"/home/pnunn/tradebase2/client/js/loginPageLayout.js",
+		"/home/pnunn/tradebase2/client/views/login.html",
+		"/home/pnunn/tradebase2/.meteor/local/build/programs/ctl/node_modules/optimist/example/line_count_options.js",
+		"/home/pnunn/tradebase2/packages/imagemagick/LICENSE",
+		"/home/pnunn/tradebase2/packages/iron-router/test/old/route_test.js",
+		"/home/pnunn/tradebase2/packages/iron-router/test/old/router_test.js",
+		"/home/pnunn/tradebase2/packages/iron-router/test/old/router_utils_test.js",
+		"/home/pnunn/tradebase2/packages/iron-router/lib/route.js",
+		"/home/pnunn/tradebase2/packages/iron-router/test/route.js",
+		"/home/pnunn/tradebase2/packages/iron-router/lib/router.js",
+		"/home/pnunn/tradebase2/packages/iron-router/test/router.js",
+		"/home/pnunn/tradebase2/packages/iron-router/test/old/route_context_test.js",
+		"/home/pnunn/tradebase2/packages/iron-router/test/old/route_path_test.js",
+		"/home/pnunn/tradebase2/packages/iron-router/lib/client/router.js",
+		"/home/pnunn/tradebase2/packages/iron-router/lib/server/router.js",
+		"/home/pnunn/tradebase2/packages/iron-router/test/client/router.js",
+		"/home/pnunn/tradebase2/packages/iron-router/test/server/router.js",
+		"/home/pnunn/tradebase2/packages/iron-router/lib/route_controller.js",
+		"/home/pnunn/tradebase2/packages/iron-router/test/route_controller.js",
+		"/home/pnunn/tradebase2/packages/iron-router/test/old/client/route_controller_test.js",
+		"/home/pnunn/tradebase2/packages/iron-router/test/old/server/route_controller_test.js",
+		"/home/pnunn/tradebase2/packages/iron-router/lib/client/route_controller.js",
+		"/home/pnunn/tradebase2/packages/iron-router/lib/server/route_controller.js",
+		"/home/pnunn/tradebase2/packages/iron-router/.build/npm/node_modules/connect/node_modules/formidable/test/integration/test-json.js",
+		"/home/pnunn/tradebase2/.meteor/local/build/programs/ctl/node_modules/npm/node_modules/retry/lib/retry_operation.js",
+		"/home/pnunn/tradebase2/.meteor/release",
+		"/home/pnunn/src/meteor/meteor-modal-example/client/tradebase2.sublime-project",
+		"/home/pnunn/.oh-my-zsh/plugins/debian/debian.plugin.zsh",
+		"/home/pnunn/.oh-my-zsh/plugins/systemadmin/systemadmin.zsh",
+		"/home/pnunn/src/meteor/Meteor-cfs-example-filemanager/client/client.js",
+		"/home/pnunn/src/meteor/Meteor-cfs-example-filemanager/view.html",
+		"/home/pnunn/src/meteor/Meteor-cfs-example-filemanager/styles.css",
+		"/home/pnunn/tradebase2/client/views/signin.html",
+		"/home/pnunn/tradebase2/client/views/search.html",
+		"/home/pnunn/tradebase2/client/views/home.html",
+		"/home/pnunn/tradebase2/client/views/helpers.html",
+		"/home/pnunn/tradebase2/client/views/accounts.html",
+		"/home/pnunn/tradebase2/client/views/about.html",
+		"/home/pnunn/tradebase2/client/js/nav.js",
+		"/home/pnunn/tradebase2/client/js/loggedInPageLayout.js",
+		"/home/pnunn/tradebase2/client/js/join.js",
+		"/home/pnunn/tradebase2/client/js/jobList.js",
+		"/home/pnunn/tradebase2/client/js/contact.js",
+		"/home/pnunn/tradebase2/client/js/accounts.js",
+		"/home/pnunn/.config/sublime-text-3/Packages/User/Distraction Free.sublime-settings",
+		"/home/pnunn/.config/sublime-text-3/Packages/User/JavaScript.sublime-settings",
+		"/home/pnunn/.config/sublime-text-3/Packages/Default/Default (Linux).sublime-keymap",
+		"/home/pnunn/join.html"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"DevDocs"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"_id",
+			"else",
+			"Collection",
+			"collection",
+			"Collection",
+			"collection",
+			"Collection",
+			"sponsorCollection",
+			"collection",
+			"oneAdd",
+			"seq",
+			"vim",
+			"/added",
+			"auto",
+			"Buffer"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 112.0
+	},
+	"project": "calendarTest.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"login",
+				"client/js/loginPageLayout.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"~/src/3081angles/3081angles/3081angels.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 242.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

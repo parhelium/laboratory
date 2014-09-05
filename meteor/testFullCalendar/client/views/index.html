@@ -1,0 +1,36 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+
+  <title>Test Calendar</title>
+</head>
+
+
+<template name="layout">
+  <div class="container">	
+	  {{>header}}
+    <div id="main" class="row-fluid">
+        {{>yield}}
+    </div>
+  </div>
+</template>
+
+<template name="header">
+<div class="navbar navbar-default" role="navigation">
+  <div class="navbar-collapse collapse">
+    <ul class="nav navbar-nav">
+      <li><a href="{{pathFor 'home'}}"><i class="glyphicon glyphicon-home"></i></a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      {{>loginButtons}}
+    </ul>
+  </div>
+</div>
+</template>
+
+<template name="not_allowed">
+	<div class="alert alert-warning">
+	    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+	    <strong>You can't do that</strong> Sorry, you don't have permission to go there
+	</div>
+</template>

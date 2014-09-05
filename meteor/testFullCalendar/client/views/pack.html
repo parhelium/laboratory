@@ -1,0 +1,35 @@
+<template name="packLayout">
+ 	{{#if showEditEvent}}
+  	{{>editEvent}}
+  {{/if}}
+<!-- 	<input type="hidden" name="lastMod" value="{{lastMod}}" id="lastMod"> -->
+	<input name="lastMod" value="{{lastMod}}" id="lastMod">
+	<h2>Packed are <span style="color:blue">blue</span>, 
+	Delivered are <span style="color:green">green</span>,
+	To Do are <span style="color: red">red</span></h2>
+	<div id="calendar">
+	</div>
+</template>
+
+<template name="editEvent">
+<div class="modal fade in show" id="modal-id">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title">Order For: <b>{{evt.title}}</b></h4>
+				Order ID: {{evt._id}}
+			</div>
+			<div class="modal-body">
+				<h2>Data goes here</h2>
+			</div>
+			<div class="modal-footer">
+				<label for="packed" class="checkbox-inline input-lg">Packed</label>
+					<input type="checkbox" name="packed" id="packed" {{isPacked evt}}/>
+				<label for="delivered" class="checkbox-inline input-lg">Delivered</label>
+					<input type="checkbox" name="delivered" id="delivered" disabled={{disDelivered evt}} {{isDelivered evt}}/>
+				<button type="button" class="btn btn-default" id="closeEdit">Close</button>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+</template>

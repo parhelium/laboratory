@@ -1,5 +1,6 @@
 # Ignore everything
 .idea
+**/bower_components/**
 **/.meteor/**
 **/.npm/**
 **/.build/**
