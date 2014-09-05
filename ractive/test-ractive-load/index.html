@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test ractive-load</title>
+</head>
+<body>
+  	<div id="demo"></div>
+
+    <!-- Dependencies -->
+	<script src='bower_components/ractive/ractive-legacy.js'></script>
+	<script src='bower_components/ractive-load/ractive-load.js'></script>
+    
+    <!-- Template -->
+    <script id='demo-template' type='text/ractive'>
+		<h2>Component main:</h2>
+		<main name={{main}} />
+	</script>
+		
+	<!-- Demo code -->
+	<script id='demo-code'>
+        Ractive.load.baseUrl = "components/";
+		Ractive.load(
+            {
+                main:'Main.html'
+            }
+        ).then( function ( components ) {
+            Ractive.components[ 'main' ] = components.main;
+
+            var ractive = new Ractive({
+                el: '#demo',
+                template: '#demo-template',
+                data: {
+                    main: 'ComponentMain from index.data'
+                }
+            });
+		}).catch( function ( err ) {
+			console.error( err.message || err );
+		});
+	</script>
+    
+</body>
+</html>

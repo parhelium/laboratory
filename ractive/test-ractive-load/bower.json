@@ -1,0 +1,25 @@
+{
+  "name": "Ractive-Load-Example",
+  "version": "0.0.1",
+  "authors": [
+    "parhelium <me@parhelium.pl>"
+  ],
+  "main": "index.html",
+  "keywords": [
+    "ractive",
+    "ractive-load"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "ractive-load": "~0.3.2",
+    "ractive": "~0.5.5"
+  }
+}

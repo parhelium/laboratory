@@ -1,0 +1,21 @@
+<!-- Dependencies -->
+
+<!-- if you DON'T define name then fileName will be used as tag, in this case it will be 'A' -->
+<link rel='ractive' href='A.html' >
+<link rel='ractive' href='B.html' name='b'>
+<!-- Template -->
+
+Component Main  : name = {{name}}<br>
+<A name="Component A from Component Main"/><br>
+<b name="Component B from Component Main"/>
+<!-- Styles -->
+<style></style>
+
+<!-- Code -->
+<script>
+    component.exports = {
+        init: function () {
+            console.log( 'Component Main' );
+        }
+    };
+</script>
