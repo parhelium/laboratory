@@ -1,0 +1,21 @@
+
+
+<template name="layout">
+	<head>
+  		<title></title>
+	</head>
+
+	<body>
+		{{yield}}
+	</body>	
+	
+</template>
+<template name="test">
+  Template test {{list_items.length}}
+  {{log data}}
+  {{#each list_items}}
+	  <div>{{user.username}}
+	    <a href="{{link}}">Click here!</a>
+	  </div>
+  {{/each}}
+</template>

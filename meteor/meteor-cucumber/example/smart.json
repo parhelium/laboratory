@@ -1,0 +1,16 @@
+{
+    "packages": {
+        "cucumber": {
+            "path": ".."
+        },
+        "cucumber-selenium": {
+            "git": "https://github.com/xdissent/meteor-cucumber-selenium.git"
+        },
+        "cucumber-protractor": {
+            "git": "https://github.com/xdissent/meteor-cucumber-protractor.git"
+        },
+        "velocity": {
+            "git": "https://github.com/xolvio/velocity.git"
+        }
+    }
+}

@@ -1,0 +1,41 @@
+<head>
+  <title>stackoverflow-bootstrap-3-modal</title>
+</head>
+
+<body>
+  {{> home}}
+  	{{> bookModal}}
+</body>
+
+<template name="home">
+	<a href"#" class="showBookModal" id="Fzra2eJKmDeJL9XQG">Fzra2eJKmDeJL9XQG</a>
+	<br>
+	<a href"#" class="showBookModal" id="HmNifJbMPhiTgxPPn">HmNifJbMPhiTgxPPn</a>
+	<!-- Button trigger modal -->
+</template>
+
+<template name="bookModal">
+{{log book}}
+
+<div class="modal fade" id="bookModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+    {{#isolate}}
+        {{#each book}}
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	        <h4 class="modal-title">{{title}}</h4>
+	      </div>
+	      <div class="modal-body">
+	        <img class="img-responsive modalBookImage" src="{{imglg}}"></img>
+	      </div>
+	      <div class="modal-footer">
+	        <p>maybe this is the problem</p>
+	      </div>
+	      {{/each}}
+	{{/isolate}}
+    
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+</template>

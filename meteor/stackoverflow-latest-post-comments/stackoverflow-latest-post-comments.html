@@ -1,0 +1,18 @@
+<head>
+  <title>stackoverflow-latest-post-comments</title>
+</head>
+
+<body>
+</body>
+
+<template name="layout">
+{{yield}}
+</template>
+<template name="home">
+	{{post.title}}
+	<br>
+	{{#each comments}}
+		{{content}}
+		<br>
+	{{/each}}
+</template>

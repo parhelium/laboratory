@@ -1,0 +1,34 @@
+<head>
+  <title>meteor-so-post-next-prev</title>
+</head>
+
+<body>
+</body>
+
+<template name="posts">
+    Posts
+    <hr>
+    {{#each posts}}
+      {{> postItem}}
+    {{/each}}
+</template>
+
+<template name="postItem">
+    <li><a href="{{pathFor 'postDetails' _postId=_id}}">PostItem : {{title}}</a></li>
+</template>
+
+<template name="postDetails">
+    PostDetails : 
+    <hr>
+    {{post.title}}
+    <hr>
+    <div>
+       {{#if prev}}
+           <a href="{{pathFor 'postDetails' _postId=prev._id}}">prev {{prev.title}}</a><br>
+       {{/if}}
+       {{#if next}}
+           <a href="{{pathFor 'postDetails' _postId=next._id}}">next : {{next.title}}</a>
+       {{/if}}
+       
+    </div>
+</template>

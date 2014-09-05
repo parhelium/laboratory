@@ -1,0 +1,23 @@
+<head>
+  <title>stackoverflow-dynamic-vars-in-temp</title>
+</head>
+
+<body>
+  {{> user}}
+</body>
+
+<template name="user">
+  {{#each get_users}}
+    {{> shelf}}
+  {{/each}}
+</template>
+
+<template name="shelf">
+  {{#each books}}
+    {{> book}}
+  {{/each}}
+</template>
+
+<template name="book">
+  <div contenteditable="true" data-id="{{id}}">id : {{this}} , name: {{name}}</div>
+</template>

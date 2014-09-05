@@ -1,0 +1,15 @@
+<head>
+  <title>meteor-so-reactive-rerender</title>
+</head>
+
+<body>
+  <ul>
+      {{> List}}
+  </ul>
+</body>
+
+<template name="List">
+  {{#each items}}
+    <li class="{{selectedItem}}">{{this}}</li>
+  {{/each}}
+</template>

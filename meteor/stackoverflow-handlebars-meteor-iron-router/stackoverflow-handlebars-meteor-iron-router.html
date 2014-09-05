@@ -1,0 +1,16 @@
+<head>
+  <title>stackoverflow-handlebars-meteor-iron-router</title>
+</head>
+
+<body>
+</body>
+
+<template name="test">
+  Template test {{list_items.length}}
+  {{log data}}
+  {{#each list_items}}
+	  <div>{{user.username}}
+	    <a href="{{link}}">Click here!</a>
+	  </div>
+  {{/each}}
+</template>

@@ -1,0 +1,22 @@
+<head>
+  <title>iron-pub-sub</title>
+</head>
+
+<body>
+</body>
+
+<template name="projectShow">
+  <div class="row">         
+    I'm a project            
+    {{project.name}}
+    <a href="#" id="add-story">New Story</a>
+    {{#each stories}}
+    <br>
+      Title: {{title}}
+    {{/each}}
+  </div>
+</template>
+
+<template name="layout">
+	{{yield}}
+</template>

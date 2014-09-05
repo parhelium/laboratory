@@ -1,0 +1,13 @@
+<template name="basicLayout">
+    <div id="main">
+        <div class="row-fluid">
+            <div id="content" class="col-md-12">
+                {{yield}}
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        {{yield 'footer'}}
+    </footer>
+</template>

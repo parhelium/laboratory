@@ -1,0 +1,11 @@
+<head>
+  <title>meteor-so-autoform-autovalue-fields</title>
+</head>
+
+<body>
+  {{> form}}
+</body>
+
+<template name="form">
+    {{> quickForm fields='orderLayers,orderLength' collection="Order" id="insertOrderForm" type='insert' buttonContent="Add Order"}}
+</template>

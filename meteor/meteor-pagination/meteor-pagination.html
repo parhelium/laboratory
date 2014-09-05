@@ -1,0 +1,17 @@
+<head>
+  <title>meteor-pagination</title>
+</head>
+
+<body>
+  {{> hello}}
+</body>
+
+<template name="hello">
+    <ul>
+        {{#each sites}}
+         <li>      
+             {{name}}
+        </li>
+        {{/each}}
+    </ul>
+</template>

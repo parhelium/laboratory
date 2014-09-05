@@ -1,0 +1,42 @@
+// Bootstrap 3
+@import "/packages/bootstrap3-less/bootstrap.lessimport";
+
+// General styles, e. g. for the body tag
+@import 'variables';
+
+/* -------------------
+    Main Content
+   ------------------- */
+
+#main {
+    margin-bottom: 60px;
+}
+
+/* -------------------
+    Footer
+   ------------------- */
+#main, footer {
+    padding: 20px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    background-color: @footerColor;
+    color: white;
+    width: 100%;
+}
+
+/* -------------------
+    Progress bar
+   ------------------- */
+
+#iron-router-progress {
+    background-color : #000000;
+    box-shadow       : 0 0 5px #000000;
+}
+
+#iron-router-progress.spinner:before {
+    border-color : #000000;
+}

@@ -1,10 +1,11 @@
 # Ignore everything
-*
-
-# But not these files...
-!.gitignore
-!iron*
-!*.css
-!*.html
-!*.md
-
+.idea
+**/.meteor/**
+**/.npm/**
+**/.build/**
+**/node_modules/**
+**/packages/**
+!**/.meteor/packages
+!**/.meteor/release
+!**/.meteor/versions
+**/*.lock

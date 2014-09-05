@@ -1,0 +1,20 @@
+	<head>
+	  <title>meteor-iron-router-auto-render-test</title>
+	</head>
+
+	<body>
+	  {{renderRouter}}
+	</body>
+
+	<template name="hello">
+	  <h1>Hello World!</h1>
+	  {{greeting}}
+	  <input type="button" value="Click" />
+	</template>
+
+	<template name="myLayout">
+		{{>yield}}
+	</template>
+
+
+

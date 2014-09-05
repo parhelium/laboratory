@@ -1,0 +1,27 @@
+<head>
+  <title>meteor-joins</title>
+</head>
+
+<body>
+  {{> movies}}
+</body>
+
+<template name="movies">
+    {{#each movies}}
+      {{> movie}}
+    {{/each}}
+</template>
+
+<template name="movie">
+    <h3><span class="name"><b>{{name}}</b></span><br></h3>
+    <span class="date"><b>Release Date:</b> {{date}}</span><br>
+    <span class="cast"><b>Cast:</b></span>
+    {{#each casts}}
+      {{> cast}}
+    {{/each}}
+    <br>
+</template>
+
+<template name="cast">
+    <a href="{{link}}">{{name}}</a>&#44;
+</template>

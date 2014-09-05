@@ -1,0 +1,7 @@
+{
+  "packages": {
+    "velocity": {},
+    "cucumber": {},
+    "velocity-html-reporter": {}
+  }
+}

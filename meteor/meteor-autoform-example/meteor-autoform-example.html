@@ -1,0 +1,476 @@
+<head>
+  <title>meteor-autoform-example</title>
+</head>
+
+<body>
+  {{> example testData}}
+</body>
+
+<template name="example">
+  <div class="container">
+    <h1>Meteor Autoform Example</h1>
+    <div class="row" style="margin-bottom: 50px;">
+      <div class="col-12 col-lg-8">
+        {{#autoForm collection=docsCollection doc=selectedDoc id="docForm" type=docFormType template="bootstrap3"}}
+        <div class="formWrap">
+          {{#with tester}}
+          <div class="form-group {{#if afFieldIsInvalid name='requiredString' autoform=..}}has-error{{/if}}">
+            {{> afFieldLabel name='requiredString' template='plain'}}
+            {{> afFieldInput name='requiredString' autofocus='autofocus' placeholder="schemaLabel" template='plain'}}
+            {{#if afFieldIsInvalid name='requiredString' autoform=..}}
+            <span class="help-block">{{{afFieldMessage name='requiredString' autoform=..}}}</span>
+            {{/if}}
+          </div>
+          {{/with}}
+          <div class="form-group {{#if afFieldIsInvalid name='optionalString'}}has-error{{/if}}">
+            {{> afFieldLabel name='optionalString'}}
+            {{> afFieldInput name='optionalString'}}
+            {{#if afFieldIsInvalid name='optionalString'}}
+            <span class="help-block">{{{afFieldMessage name='optionalString'}}}</span>
+            {{/if}}
+          </div>
+          <div class="form-group {{#if afFieldIsInvalid name='labelString'}}has-error{{/if}}">
+            {{> afFieldLabel name='labelString'}}
+            {{> afFieldInput name='labelString' placeholder="schemaLabel"}}
+            {{#if afFieldIsInvalid name='labelString'}}
+            <span class="help-block">{{{afFieldMessage name='labelString'}}}</span>
+            {{/if}}
+          </div>
+          <div class="form-group {{#if afFieldIsInvalid name='longString'}}has-error{{/if}}">
+            {{> afFieldLabel name='longString'}}
+            {{> afFieldInput name='longString' rows="5"}}
+            {{#if afFieldIsInvalid name='longString'}}
+            <span class="help-block">{{{afFieldMessage name='longString'}}}</span>
+            {{/if}}
+          </div>
+          <div class="form-group {{#if afFieldIsInvalid name='maxString'}}has-error{{/if}}">
+            {{> afFieldLabel name='maxString'}}
+            <span class="help-block">Allows a max of 10 characters, but optional</span>
+            {{> afFieldInput name='maxString'}}
+            {{#if afFieldIsInvalid name='maxString'}}
+            <span class="help-block">{{{afFieldMessage name='maxString'}}}</span>
+            {{/if}}
+          </div>
+          <div class="form-group {{#if afFieldIsInvalid name='minString'}}has-error{{/if}}">
+            {{> afFieldLabel name='minString'}}
+            <span class="help-block">Allows a min of 10 characters, but optional</span>
+            {{> afFieldInput name='minString'}}
+            {{#if afFieldIsInvalid name='minString'}}
+            <span class="help-block">{{{afFieldMessage name='minString'}}}</span>
+            {{/if}}
+          </div>
+          <div class="form-group {{#if afFieldIsInvalid name='requiredBoolean'}}has-error{{/if}}">
+            {{> afFieldInput name='requiredBoolean'}}
+            {{#if afFieldIsInvalid name='requiredBoolean'}}
+            <span class="help-block">{{{afFieldMessage name='requiredBoolean'}}}</span>
+            {{/if}}
+          </div>
+          <div class="form-group {{#if afFieldIsInvalid name='optionalBoolean'}}has-error{{/if}}">
+            {{> afFieldInput name='optionalBoolean'}}
+            {{#if afFieldIsInvalid name='optionalBoolean'}}
+            <span class="help-block">{{{afFieldMessage name='optionalBoolean'}}}</span>
+            {{/if}}
+          </div>
+          <div class="form-group {{#if afFieldIsInvalid name='radioBoolean'}}has-error{{/if}}">
+            {{> afFieldLabel name='radioBoolean'}}
+            {{> afFieldInput name='radioBoolean' radio="true" trueLabel="Yes" falseLabel="No"}}
+            {{#if afFieldIsInvalid name='radioBoolean'}}
+            <span class="help-block">{{{afFieldMessage name='radioBoolean'}}}</span>
+            {{/if}}
+          </div>
+          <div class="form-group {{#if afFieldIsInvalid name='selectBoolean'}}has-error{{/if}}">
+            {{> afFieldLabel name='selectBoolean'}}
+            {{> afFieldInput name='selectBoolean' select="true" trueLabel="Yes" falseLabel="No" value="true"}}
+            {{#if afFieldIsInvalid name='selectBoolean'}}
+            <span class="help-block">{{{afFieldMessage name='selectBoolean'}}}</span>
+            {{/if}}
+          </div>
+          <div class="form-group {{#if afFieldIsInvalid name='requiredSelect'}}has-error{{/if}}">
+            {{> afFieldLabel name='requiredSelect'}}
+            {{#afFieldSelect name='requiredSelect'}}
+              <optgroup label="Group One">
+                <option value="1">One</option>
+              </optgroup>
+              <optgroup label="Group Two">
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </optgroup>
+            {{/afFieldSelect}}
+            {{#if afFieldIsInvalid name='requiredSelect'}}
+            <span class="help-block">{{{afFieldMessage name='requiredSelect'}}}</span>
+            {{/if}}
+          </div>
+          <div class="form-group {{#if afFieldIsInvalid name='optionalSelect'}}has-error{{/if}}">
+            {{> afFieldLabel name='optionalSelect'}}
+            {{> afFieldInput name='optionalSelect' options="allowed" capitalize="true"}}
+            {{#if afFieldIsInvalid name='optionalSelect'}}
+            <span class="help-block">{{{afFieldMessage name='optionalSelect'}}}</span>
+            {{/if}}
+          </div>
+          <div class="form-group {{#if afFieldIsInvalid name='firstOptionSelect'}}has-error{{/if}}">
+            {{> afFieldLabel name='firstOptionSelect'}}
+            {{> afFieldInput name='firstOptionSelect' firstOption="(Select Something)" options=numSelectOptions}}
+            {{#if afFieldIsInvalid name='firstOptionSelect'}}
+            <span class="help-block">{{{afFieldMessage name='firstOptionSelect'}}}</span>
+            {{/if}}
+          </div>
+          <div class="form-group {{#if afFieldIsInvalid name='firstOptionRequiredSelect'}}has-error{{/if}}">
+            {{> afFieldLabel name='firstOptionRequiredSelect'}}
+            {{> afFieldInput name='firstOptionRequiredSelect' firstOption="(Select Something)" options=numSelectOptions}}
+            {{#if afFieldIsInvalid name='firstOptionRequiredSelect'}}
+            <span class="help-block">{{{afFieldMessage name='firstOptionRequiredSelect'}}}</span>
+            {{/if}}
+          </div>
+          <div class="form-group {{#if afFieldIsInvalid name='maxSelect'}}has-error{{/if}}">
+            {{> afFieldLabel name='maxSelect'}}
+            <span class="help-block">Select no more than two options</span>
+            {{> afFieldInput name='maxSelect' options=numSelectOptions}}
+            {{#if afFieldIsInvalid name='maxSelect'}}
+            <span class="help-block">{{{afFieldMessage name='maxSelect'}}}</span>
+            {{/if}}
+          </div>
+          <div class="form-group {{#if afFieldIsInvalid name='minSelect'}}has-error{{/if}}">
+            {{> afFieldLabel name='minSelect'}}
+            <span class="help-block">Select at least two options</span>
+            {{> afFieldInput name='minSelect' options=numSelectOptions}}
+            {{#if afFieldIsInvalid name='minSelect'}}
+            <span class="help-block">{{{afFieldMessage name='minSelect'}}}</span>
+            {{/if}}
+          </div>
+          <div class="form-group {{#if afFieldIsInvalid name='optionalStringArray'}}has-error{{/if}}">
+            {{> afFieldLabel name='optionalStringArray'}}
+            {{> afFieldInput name='optionalStringArray'}}
+            {{#if afFieldIsInvalid name='optionalStringArray'}}
+            <span class="help-block">{{{afFieldMessage name='optionalStringArray'}}}</span>
+            {{/if}}
+          </div>
+          <div class="form-group {{#if afFieldIsInvalid name='requiredNumber'}}has-error{{/if}}">
+            {{> afFieldLabel name='requiredNumber'}}
+            {{> afFieldInput name='requiredNumber'}}
+            {{#if afFieldIsInvalid name='requiredNumber'}}
+            <span class="help-block">{{{afFieldMessage name='requiredNumber'}}}</span>
+            {{/if}}
+          </div>
+          <div class="form-group {{#if afFieldIsInvalid name='optionalNumber'}}has-error{{/if}}">
+            {{> afFieldLabel name='optionalNumber'}}
+            {{> afFieldInput name='optionalNumber'}}
+            {{#if afFieldIsInvalid name='optionalNumber'}}
+            <span class="help-block">{{{afFieldMessage name='optionalNumber'}}}</span>
+            {{/if}}
+          </div>
+          <div class="form-group {{#if afFieldIsInvalid name='maxNumber'}}has-error{{/if}}">
+            {{> afFieldLabel name='maxNumber'}}
+            <span class="help-block">Enter a number less than 10</span>
+            {{> afFieldInput name='maxNumber'}}
+            {{#if afFieldIsInvalid name='maxNumber'}}
+            <span class="help-block">{{{afFieldMessage name='maxNumber'}}}</span>
+            {{/if}}
+          </div>
+          <div class="form-group {{#if afFieldIsInvalid name='minNumber'}}has-error{{/if}}">
+            {{> afFieldLabel name='minNumber'}}
+            <span class="help-block">Enter a number more than 10</span>
+            {{> afFieldInput name='minNumber'}}
+            {{#if afFieldIsInvalid name='minNumber'}}
+            <span class="help-block">{{{afFieldMessage name='minNumber'}}}</span>
+            {{/if}}
+          </div>
+          <div class="form-group {{#if afFieldIsInvalid name='decimal'}}has-error{{/if}}">
+            {{> afFieldLabel name='decimal'}}
+            <span class="help-block">Decimal number is OK</span>
+            {{> afFieldInput name='decimal' step="0.01"}}
+            {{#if afFieldIsInvalid name='decimal'}}
+            <span class="help-block">{{{afFieldMessage name='decimal'}}}</span>
+            {{/if}}
+          </div>
+          <div class="form-group {{#if afFieldIsInvalid name='requiredDate'}}has-error{{/if}}">
+            {{> afFieldLabel name='requiredDate'}}
+            {{> afFieldInput name='requiredDate'}}
+            {{#if afFieldIsInvalid name='requiredDate'}}
+            <span class="help-block">{{{afFieldMessage name='requiredDate'}}}</span>
+            {{/if}}
+          </div>
+          <div class="form-group {{#if afFieldIsInvalid name='optionalDate'}}has-error{{/if}}">
+            {{> afFieldLabel name='optionalDate'}}
+            {{> afFieldInput name='optionalDate'}}
+            {{#if afFieldIsInvalid name='optionalDate'}}
+            <span class="help-block">{{{afFieldMessage name='optionalDate'}}}</span>
+            {{/if}}
+          </div>
+          <div class="form-group {{#if afFieldIsInvalid name='minDate'}}has-error{{/if}}">
+            {{> afFieldLabel name='minDate'}}
+            <span class="help-block">Enter a date on or after 1 January 2013</span>
+            {{> afFieldInput name='minDate'}}
+            {{#if afFieldIsInvalid name='minDate'}}
+            <span class="help-block">{{{afFieldMessage name='minDate'}}}</span>
+            {{/if}}
+          </div>
+          <div class="form-group {{#if afFieldIsInvalid name='maxDate'}}has-error{{/if}}">
+            {{> afFieldLabel name='maxDate'}}
+            <span class="help-block">Enter a date on or before 31 December 2012</span>
+            {{> afFieldInput name='maxDate'}}
+            {{#if afFieldIsInvalid name='maxDate'}}
+            <span class="help-block">{{{afFieldMessage name='maxDate'}}}</span>
+            {{/if}}
+          </div>
+          <div class="form-group {{#if afFieldIsInvalid name='requiredEmail'}}has-error{{/if}}">
+            {{> afFieldLabel name='requiredEmail'}}
+            {{> afFieldInput name='requiredEmail'}}
+            {{#if afFieldIsInvalid name='requiredEmail'}}
+            <span class="help-block">{{{afFieldMessage name='requiredEmail'}}}</span>
+            {{/if}}
+          </div>
+          <div class="form-group {{#if afFieldIsInvalid name='optionalEmail'}}has-error{{/if}}">
+            {{> afFieldLabel name='optionalEmail'}}
+            {{> afFieldInput name='optionalEmail'}}
+            {{#if afFieldIsInvalid name='optionalEmail'}}
+            <span class="help-block">{{{afFieldMessage name='optionalEmail'}}}</span>
+            {{/if}}
+          </div>
+          <div class="form-group {{#if afFieldIsInvalid name='requiredUrl'}}has-error{{/if}}">
+            {{> afFieldLabel name='requiredUrl'}}
+            {{> afFieldInput name='requiredUrl'}}
+            {{#if afFieldIsInvalid name='requiredUrl'}}
+            <span class="help-block">{{{afFieldMessage name='requiredUrl'}}}</span>
+            {{/if}}
+          </div>
+          <div class="form-group {{#if afFieldIsInvalid name='optionalUrl'}}has-error{{/if}}">
+            {{> afFieldLabel name='optionalUrl'}}
+            {{> afFieldInput name='optionalUrl'}}
+            {{#if afFieldIsInvalid name='optionalUrl'}}
+            <span class="help-block">{{{afFieldMessage name='optionalUrl'}}}</span>
+            {{/if}}
+          </div>
+          <div class="form-group {{#if afFieldIsInvalid name='a.b.c'}}has-error{{/if}}">
+            {{> afFieldLabel name='a.b.c'}}
+            {{> afFieldInput name='a.b.c'}}
+            {{#if afFieldIsInvalid name='a.b.c'}}
+            <span class="help-block">{{{afFieldMessage name='a.b.c'}}}</span>
+            {{/if}}
+          </div>
+          <fieldset>
+            <label>Array of Objects Test</label>
+            {{#afEachArrayItem name='items'}}
+            <div class="autoform-array-item">
+            {{> afQuickField name=this.current.name}}
+            {{> afQuickField name=this.current.quantity}}
+            <button class="btn btn-primary autoform-remove-item" data-autoform-field="items">Remove</button>
+            </div>
+            {{/afEachArrayItem}}
+            <button class="btn btn-primary autoform-add-item" data-autoform-field="items">Add</button>
+          </fieldset>
+        </div>
+        <button type="submit" class="btn btn-primary">{{#if newDocMode}}Insert{{else}}Update{{/if}}</button>
+        <button type="reset" class="btn btn-default">Reset</button>
+        {{/autoForm}}
+        <h2>Virtual Field Test</h2>
+        {{> virtualFields}}
+        <h2>Contact Form Test</h2>
+        {{> contactForm}}
+        <h2>Horizontal Contact Form Test</h2>
+        {{> horizontalContactForm}}
+        <h2>Normal Submit Form</h2>
+        {{> normalSubmitForm}}
+        <h2>Quick Form Test</h2>
+        <div class="formWrap">
+          {{> quickForm collection=docsCollection validation="keyup" type="update" id="myQuickForm" buttonClasses="btn btn-primary" doc=selectedDoc buttonContent="Update" omitFields="requiredString,optionalString,items.$.quantity"}}
+        </div>
+        <h2>Dates Test</h2>
+        {{> datesForm}}
+        <h2>afFieldValueIs Test</h2>
+        {{> isForm}}
+        <h2>afFieldValueContains Test</h2>
+        {{> containsForm}}
+        <h2>getFieldValue Test</h2>
+        {{> reactiveCurrentValue}}
+      </div>
+      <div class="col-12 col-lg-4">
+        {{> docTable}}
+      </div>
+    </div>
+  </div>
+</template>
+
+<template name="docTable">
+  <table class="table table-bordered table-striped table-hover">
+    <tbody>
+      <tr>
+        <td><button type="button" class="btn-link docClear">New Document</button></td>
+        <td></td>
+      </tr>
+      {{#each documents}}
+      <tr>
+        <td><button type="button" class="btn-link docSelect">{{requiredString}}</button></td>
+        <td>
+          {{#autoForm collection='Documents' doc=this type="remove"}}
+          <button type="submit" class="btn btn-primary">Delete</button>
+          {{/autoForm}}
+        </td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</template>
+
+<template name="virtualFields">
+  {{#if showPersonForm}}
+  {{#autoForm collection='Persons' validation="keyup" id="personsForm" type="insert"}}
+  <fieldset>
+    <legend>Add a Person</legend>
+    <div class="form-group {{#if afFieldIsInvalid name='firstName'}}has-error{{/if}}">
+      {{> afFieldLabel name='firstName'}}
+      {{> afFieldInput name='firstName' disabled='disabled'}}
+      {{#if afFieldIsInvalid name='firstName'}}
+      <span class="help-block">{{{afFieldMessage name='firstName'}}}</span>
+      {{/if}}
+    </div>
+    <div class="form-group {{#if afFieldIsInvalid name='lastName'}}has-error{{/if}}">
+      {{> afFieldLabel name='lastName'}}
+      {{> afFieldInput name='lastName'}}
+      {{#if afFieldIsInvalid name='lastName'}}
+      <span class="help-block">{{{afFieldMessage name='lastName'}}}</span>
+      {{/if}}
+    </div>
+  </fieldset>
+  <button type="submit" class="btn btn-primary">Insert</button>
+  {{/autoForm}}
+  {{/if}}
+  <table class="table table-bordered table-striped table-hover" style="margin: 25px 0;">
+    <thead>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Full Name (virtual)</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each persons}}
+      <tr>
+        <td>{{firstName}}</td>
+        <td>{{lastName}}</td>
+        <td>{{fullName}}</td>
+        <td>
+          {{#afDeleteButton collection='Persons' doc=this style='height: 60px;'}}<span style="color: yellow">DELETE ME</span>{{/afDeleteButton}}
+          {{> afDeleteButton collection='Persons' doc=this}}
+        </td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</template>
+
+<template name="contactForm">
+  {{#autoForm schema=Schemas.ContactForm id="contactForm" type="method" meteormethod="sendEmail"}}
+  <fieldset>
+    <legend>Contact Us</legend>
+    <div class="form-group {{#if afFieldIsInvalid name='name'}}has-error{{/if}}">
+      {{> afFieldLabel name="name"}}
+      {{> afFieldInput name="name"}}
+      {{#if afFieldIsInvalid name="name"}}
+      <span class="help-block">{{{afFieldMessage name="name"}}}</span>
+      {{/if}}
+    </div>
+    <div class="form-group {{#if afFieldIsInvalid name='email'}}has-error{{/if}}">
+      {{> afFieldLabel name="email"}}
+      {{> afFieldInput name="email"}}
+      {{#if afFieldIsInvalid name="email"}}
+      <span class="help-block">{{{afFieldMessage name="email"}}}</span>
+      {{/if}}
+    </div>
+    <div class="form-group {{#if afFieldIsInvalid name='message'}}has-error{{/if}}">
+      {{> afFieldLabel name="message"}}
+      {{> afFieldInput name="message" rows="10"}}
+      {{#if afFieldIsInvalid name="message"}}
+      <span class="help-block">{{{afFieldMessage name="message"}}}</span>
+      {{/if}}
+    </div>
+    <div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="reset" class="btn btn-default">Reset</button>
+    </div>
+  </fieldset>
+  {{/autoForm}}
+</template>
+
+<template name="normalSubmitForm">
+  {{#autoForm schema=Schemas.ContactForm id="contactForm2" action="/fake" method="post"}}
+  <fieldset>
+    <legend>Contact Us</legend>
+    {{> afQuickField name="name" label=false placeholder="schemaLabel"}}
+    {{> afQuickField name="email" label=false placeholder="schemaLabel"}}
+    {{> afQuickField name="message" label=false placeholder="schemaLabel" rows="10"}}
+    <div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="reset" class="btn btn-default">Reset</button>
+    </div>
+  </fieldset>
+  {{/autoForm}}
+</template>
+
+<template name="horizontalContactForm">
+  {{#autoForm schema=Schemas.ContactForm id="contactForm3" type="method" meteormethod="sendEmail"}}
+  <fieldset>
+    <legend>Contact Us</legend>
+    {{> afQuickField name="name" template="bootstrap3-horizontal" label-class="col-sm-6" input-col-class="col-sm-6"}}
+    {{> afQuickField name="email" template="bootstrap3-horizontal" label-class="col-sm-6" input-col-class="col-sm-6"}}
+    {{> afQuickField name="message" template="bootstrap3-horizontal" label-class="col-sm-6" input-col-class="col-sm-6"}}
+    <div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="reset" class="btn btn-default">Reset</button>
+    </div>
+  </fieldset>
+  {{/autoForm}}
+  {{> quickForm schema=Schemas.ContactForm id="contactForm4" type="method" meteormethod="sendEmail" template="bootstrap3-horizontal" label-class="col-sm-3" input-col-class="col-sm-9"}}
+</template>
+
+<template name="datesForm">
+  {{#autoForm collection="Dates" type="insert" doc=dateDoc id="datesForm1"}}
+  {{> afQuickField name="date" value=today}}
+  <div>
+    <button type="submit" class="btn btn-primary">Insert</button>
+  </div>
+  {{/autoForm}}
+  {{#autoForm collection="Dates" type="insert" doc=dateTimeDoc id="datesForm2"}}
+  {{> afQuickField name="dateTime" type="datetime"}}
+  <div>
+    <button type="submit" class="btn btn-primary">Insert</button>
+  </div>
+  {{/autoForm}}
+  {{#autoForm collection="Dates" type="insert" doc=dateTimeLocalDoc id="datesForm3"}}
+  {{> afQuickField name="dateTimeLocal" type="datetime-local" offset="-0100"}}
+  <div>
+    <button type="submit" class="btn btn-primary">Insert</button>
+  </div>
+  {{/autoForm}}
+</template>
+
+<template name="isForm">
+  <p>A "B" field is displayed only when the current value of the "A" field is "foo".</p>
+  {{#autoForm collection="FieldValueIs" type="insert" id="FieldValueIsForm"}}
+  {{> afQuickField name="a" options="allowed" noselect=true}}
+  {{#if afFieldValueIs name="a" value="foo"}}
+  {{> afQuickField name="b"}}
+  {{/if}}
+  <button type="submit" class="btn btn-primary">Insert</button>
+  {{/autoForm}}
+</template>
+
+<template name="containsForm">
+  <p>A "B" field is displayed only when the current value of the "A" field contains "foo".</p>
+  {{#autoForm collection="FieldValueContains" type="insert" id="FieldValueContainsForm"}}
+  {{> afQuickField name="a" options="allowed" noselect=true}}
+  {{#if afFieldValueContains name="a" value="foo"}}
+  {{> afQuickField name="b"}}
+  {{/if}}
+  <button type="submit" class="btn btn-primary">Insert</button>
+  {{/autoForm}}
+</template>
+
+<template name="reactiveCurrentValue">
+  <p>Using AutoForm.getFieldValue, the current value is reactively displayed elsewhere.</p>
+  {{#autoForm collection="FieldValueIs" type="insert" id="reactiveCurrentValueForm"}}
+  {{> afQuickField name="a" options="allowed" noselect=true}}
+  <p>The current value of the "A" field is {{currentAFieldValue}}.</p>
+  <button type="submit" class="btn btn-primary">Insert</button>
+  {{/autoForm}}
+</template>
