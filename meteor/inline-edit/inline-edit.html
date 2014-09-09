@@ -1,0 +1,24 @@
+<head>
+  <title>inline-edit</title>
+</head>
+
+<body>
+  {{> clientView}}
+  {{> admin}}
+</body>
+
+<template name="admin">
+  <button id="addClient">Add client</button>
+</template>
+<template name="clientView">
+            {{#if clientEditMode}}
+                <div class="form-group">
+                    <input type="hidden" value="{{_id}}" id="clientId" />
+                    <label for="name">Client Name</label>
+                    <input type="text" class="form-control clientNameInput" id="name" name="name" value="{{name}}" placeholder="Client Name" pattern="[a-zA-Z]+" required />
+                    <button class="btn btn-sm btn-success">Done</button>
+                </div>
+            {{else}}
+                {{name}}
+            {{/if}}
+</template>
