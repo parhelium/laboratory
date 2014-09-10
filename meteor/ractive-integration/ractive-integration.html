@@ -1,0 +1,15 @@
+<head>
+  <title>ractive-integration</title>
+  <script id="helloWorldTemplate" type="text/ractive">
+        <p>{{greeting}} {{name}}!</p>
+  </script>
+</head>
+
+<body>
+  {{> helloWorld}}
+</body>
+
+
+<template name="helloWorld">
+  <div class="container"></div>
+</template>
