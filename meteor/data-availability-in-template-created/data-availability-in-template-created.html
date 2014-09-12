@@ -1,0 +1,20 @@
+<head>
+  <title>data-availability-in-template-created</title>
+</head>
+
+<body>
+</body>
+
+<template name="test">
+    {{static}}
+    Posts :
+    <ul>
+        {{#each posts}}
+           <li>{{title}}</li>
+        {{/each}}
+    </ul>
+</template>
+
+<template name="Loading">
+    LOADING
+</template>
