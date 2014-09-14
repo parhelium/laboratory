@@ -1,0 +1,16 @@
+<head>
+  <title>updating-already-published-collection</title>
+</head>
+
+<body>
+  {{> posts}}
+</body>
+
+<template name="posts">
+    Posts :
+  <ul>
+      {{#each items}}
+        <li>{{title}}</li>
+      {{/each}}
+  </ul>
+</template>
