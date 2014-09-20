@@ -1,0 +1,15 @@
+<head>
+  <title>rerun-function-templates-data-change</title>
+</head>
+
+<body>
+  {{> test}}
+</body>
+
+<template name="test">
+    {{> UI.dynamic template='child' data=childContent}}
+</template>
+
+<template name="child">
+    Child content : {{content}}
+</template>
