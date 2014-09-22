@@ -2,7 +2,13 @@ if (Meteor.isClient) {
     Template.helloWorld.helpers({});
 
     Template.helloWorld.rendered = function () {
-        console.log(Ractive);
+
+        if(!Ractive) {
+            console.error("Ractive library is not included");
+            return;
+        }else{
+            console.log("Ractive is installed " ,Ractive);
+        }
         var ractive = new Ractive({
             el: ".container",
             template: "#helloWorldTemplate",

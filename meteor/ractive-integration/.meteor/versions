@@ -28,7 +28,7 @@ minimongo@1.0.2
 mongo@1.0.4
 observe-sequence@1.0.2
 ordered-dict@1.0.0
-parhelium:ractive@0.5.6
+parhelium:ractive@0.5.8
 random@1.0.0
 reactive-dict@1.0.2
 reactive-var@1.0.1
