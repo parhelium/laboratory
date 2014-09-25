@@ -10,7 +10,7 @@ if (Meteor.isClient) {
             console.log("Ractive is installed " ,Ractive);
         }
         try{
-            var template = this.$("rasct")
+            var template = this.$("ract")
                 .contents()
                 .filter(function() {
                     return this.nodeType === 8;
