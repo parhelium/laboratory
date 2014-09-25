@@ -12,9 +12,7 @@ if (Meteor.isClient) {
         try{
             var template = this.$("ract")
                 .contents()
-                .filter(function() {
-                    return this.nodeType === 8;
-                })
+                .filter(function() { return this.nodeType === 8; })
                 .get(0).nodeValue;
         }catch(error){
             console.error("Ractive template was not properly defined. Wrap it with:\n<ract><!--\nRACTIVE_TEMPLATE\n--></ract>")
