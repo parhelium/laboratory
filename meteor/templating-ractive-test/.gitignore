@@ -1,0 +1,11 @@
+.idea
+**/bower_components/**
+**/.meteor/**
+**/.npm/**
+**/.build/**
+**/node_modules/**
+**/packages/**
+!**/.meteor/packages
+!**/.meteor/release
+!**/.meteor/versions
+**/*.lock
