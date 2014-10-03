@@ -1,1 +1,1 @@
-Example how to use parhelium:templating-ractive package in meteor app.
+Example how to use `parhelium:templating-ractive` package in meteor app.
