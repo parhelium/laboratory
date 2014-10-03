@@ -1,0 +1,1 @@
+Example how to use parhelium:templating-ractive package in meteor app.

@@ -1,0 +1,3 @@
+Ractive template from file ractive-integration.ract
+<br>gretting:{{greeting}}
+<br>name:{{name}}
