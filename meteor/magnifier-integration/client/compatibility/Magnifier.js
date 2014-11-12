@@ -6,7 +6,7 @@
  *
  * @author Mark Rolich <mark.rolich@gmail.com>
  */
-Event = function () {
+var Event = function () {
     "use strict";
     this.attach = function (evtName, element, listener, capture) {
         var evt         = '',
@@ -86,7 +86,7 @@ Event = function () {
 *
 * @author Mark Rolich <mark.rolich@gmail.com>
 */
-Magnifier = function (evt, options) {
+var Magnifier = function (evt, options) {
     "use strict";
 
     var gOptions = options || {},
