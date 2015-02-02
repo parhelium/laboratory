@@ -1,0 +1,11 @@
+
+Hello !
+<ImageZoom
+    thumb_url="https://s3-eu-west-1.amazonaws.com/wizjafotografii-images/materials-120/IMG_2310.jpg"
+    source_url="https://s3-eu-west-1.amazonaws.com/wizjafotografii-images/materials/IMG_2310.jpg "
+/>
+
+<ImageZoom
+        thumb_url="{{small}}"
+        source_url="{{big}}"
+/>
