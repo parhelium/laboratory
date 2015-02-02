@@ -1,0 +1,16 @@
+<head>
+  <title>pass-parent-helper-to-subtemplate</title>
+</head>
+
+<body>
+  {{> tParent}}
+</body>
+
+<template name="tParent">
+    <div style="background-color: #000066; width:200px; height:200px"></div>
+   {{>tChild h1=helper1 h2=helper2}}
+</template>
+<template name="tChild">
+   {{h1}}
+   {{h2}}
+</template>
