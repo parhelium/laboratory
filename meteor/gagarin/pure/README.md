@@ -8,11 +8,11 @@ https://github.com/anticoders/gagarin
 
 ## Run
 
-### Launch app
+### 1 Launch app
 
     meteor
 
-### Test app
+### 2 Test app
 
     gagarin -t 5000
 

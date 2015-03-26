@@ -10,5 +10,4 @@ describe('Example test suite', function () {
                 expect(value).not.to.be.empty;
             });
     });
-
 });
