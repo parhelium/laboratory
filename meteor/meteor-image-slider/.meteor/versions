@@ -24,6 +24,7 @@ ejson@1.0.7
 es5-shim@4.1.14
 fastclick@1.0.7
 geojson-utils@1.0.4
+hb5:meteor-is.js@0.0.1
 hot-code-push@1.0.0
 html-tools@1.0.5
 htmljs@1.0.5
@@ -32,6 +33,7 @@ id-map@1.0.4
 insecure@1.0.4
 jquery@1.11.4
 launch-screen@1.0.4
+less@2.5.1
 livedata@1.0.15
 logging@1.0.8
 meteor@1.1.10
@@ -45,6 +47,14 @@ mongo-id@1.0.1
 npm-mongo@1.4.39_1
 observe-sequence@1.0.7
 ordered-dict@1.0.4
+parhelium:bluebird@2.3.4
+parhelium:bows@1.0.0
+parhelium:logger@1.0.1
+parhelium:ractive@0.7.3
+parhelium:ractive-in-blaze@0.0.6
+parhelium:ractive-promise-alt@1.0.0
+parhelium:templating-ractive@0.7.3_1
+parhelium:ui-image-slider@1.0.0
 promise@0.5.1
 random@1.0.5
 reactive-dict@1.1.3

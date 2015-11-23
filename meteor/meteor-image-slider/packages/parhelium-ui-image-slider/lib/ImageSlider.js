@@ -21,14 +21,14 @@ ImageSlider = Ractive.extend({
     computed: {
         index: function(){
             var self = this;
-            return Math.abs(self.get('_index')) % self.data.items.length;
+            return Math.abs(self.get('_index')) % self.get().items.length;
         }
     },
     oninit: function () {
         var self = this;
         logger.log("oninit", this)
         // make sure first image in the list is first
-        self.set('_index',10000*self.data.items.length);
+        self.set('_index',10000*self.get().items.length);
         self.set('activeImageUrl',self.activeImageUrl);
         self.set('isDotActive',function(idx){
             logger.log('isDotActive : ',idx);

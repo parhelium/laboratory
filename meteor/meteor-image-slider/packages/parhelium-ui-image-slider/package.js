@@ -8,16 +8,16 @@ Package.describe({
 Package.onUse(function(api) {
     api.versionsFrom('METEOR@0.9.0');
     api.use([
-        'less',
+        'less@2.5.1',
         'parhelium:bluebird',
         'parhelium:logger',
-        'parhelium:ractive@0.7.3_1',
+        'parhelium:ractive@0.7.3',
         'parhelium:ractive-promise-alt',
         'parhelium:templating-ractive'
     ], ['client']);
 
     api.imply([
-        'parhelium:ractive@0.7.3_1',
+        'parhelium:ractive@0.7.3',
         'parhelium:templating-ractive'
     ])
     api.addFiles(

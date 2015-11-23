@@ -8,11 +8,10 @@ Package.describe({
 Package.onUse(function(api) {
   api.versionsFrom('1.0');
   api.use([
-        'less',
         'parhelium:bluebird',
-        'parhelium:ractive@0.6.0'
+        'parhelium:ractive@0.7.3'
   ], ['client']);
-  api.imply('parhelium:ractive@0.6.0')
+  api.imply('parhelium:ractive')
   api.addFiles('parhelium:ractive-promise-alt.js');
 });
 
