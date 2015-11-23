@@ -1,0 +1,27 @@
+{
+  "dependencies": [
+    [
+      "less",
+      "1.0.11"
+    ],
+    [
+      "meteor",
+      "1.1.3"
+    ],
+    [
+      "parhelium:bluebird",
+      "2.3.4"
+    ],
+    [
+      "parhelium:ractive",
+      "0.6.1"
+    ],
+    [
+      "underscore",
+      "1.0.1"
+    ]
+  ],
+  "pluginDependencies": [],
+  "toolVersion": "meteor-tool@1.0.36",
+  "format": "1.0"
+}

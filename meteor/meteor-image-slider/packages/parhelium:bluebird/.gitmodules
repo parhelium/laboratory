@@ -1,0 +1,3 @@
+[submodule "lib/bluebird"]
+	path = lib/bluebird
+	url = https://github.com/petkaantonov/bluebird

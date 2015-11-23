@@ -11,12 +11,15 @@ Package.onUse(function(api) {
         'less',
         'parhelium:bluebird',
         'parhelium:logger',
-        'parhelium:ractive@0.6.0',
+        'parhelium:ractive@0.7.3_1',
         'parhelium:ractive-promise-alt',
         'parhelium:templating-ractive'
     ], ['client']);
 
-    api.imply('parhelium:ractive@0.6.0')
+    api.imply([
+        'parhelium:ractive@0.7.3_1',
+        'parhelium:templating-ractive'
+    ])
     api.addFiles(
         [
             'lib/ImageSlider.js',

@@ -1,0 +1,7 @@
+.build*
+.idea
+.idea/**
+
+.npm/package/README
+
+.npm/package/npm-shrinkwrap.json
