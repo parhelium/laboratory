@@ -6,6 +6,5 @@
 meteor-platform
 autopublish
 insecure
-parhelium:ractive
-parhelium:templating-ractive
+parhelium:templating-ractive@0.7.3_1
 
