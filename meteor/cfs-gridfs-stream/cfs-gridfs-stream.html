@@ -1,0 +1,24 @@
+
+<body>
+  {{> imageUploader}}
+</body>
+
+
+<template name="imageUploader">
+  <h2>Picture</h2>
+  <p>
+      {{#each images}}
+        <img src="{{url}}" alt="">
+        <input type="button" value="remove" class="btnRemove"/>
+      {{else}}
+        No files uploaded.
+      {{/each}}
+  </p>
+  <p>Upload profile pic:</p>
+  <input name="files" id="files" type="file" multiple/><br/>
+  <br/>
+  <div id="dropzone" class="dropzone">
+    <div style="text-align: center; color: gray;">Drop file to upload</div>
+  </div>
+  <br/>
+</template>
