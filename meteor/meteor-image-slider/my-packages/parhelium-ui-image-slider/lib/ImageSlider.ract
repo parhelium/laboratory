@@ -1,0 +1,20 @@
+<div class="imageSlider_wrapper thumbnail">
+    <img src="{{activeImageUrl()}}"
+         on-mouseenter="onMouseEnter"
+         on-mouseleave="onMouseLeave"
+         on-mousemove="onMouseMove"
+         on-click="onClick"
+            >
+    <ol class="dots">
+        {{#each items:idx}}
+            <li class="dot {{ isDotActive(idx) }}"
+                on-click="onDotClick:{{idx}}"
+            ></li>
+        {{/each}}
+    </ol>
+
+    <div class="imageSlider_arrowWrapper" >
+        <i class="icon glyphicon glyphicon-chevron-left imageSlider_left {{ leftVisibilityClass }}"></i>
+        <i class="icon glyphicon glyphicon-chevron-right imageSlider_right {{ rightVisibilityClass }}"></i>
+    </div>
+</div>
