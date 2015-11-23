@@ -1,0 +1,1 @@
+bows = function(){return console};
